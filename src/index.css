@@ -65,12 +65,137 @@ h1 {
 .main-container {
   background-color: var(--neutral-white);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
-.main-container > div {
+.main-container > div,
+.radio-group > div {
   flex: 1;
+}
 
+/* Hide the default radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style the radio label as a button */
+.radio-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: var(--neutral-very-dark-cyan);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Style the label when the associated radio button is checked */
+input[type="radio"]:checked + label {
+  background-color: var(--primary-strong-cyan);
+  color: var(--neutral-very-dark-cyan);
+}
+
+.radio-group {
+  display: flex;
+}
+
+.results-div {
+  background-color: var(--neutral-very-dark-cyan);
+  color: var(--neutral-white);
+  padding: 2rem;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.results-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: var(--primary-strong-cyan);
+  color: var(--neutral-very-dark-cyan);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--ff-primary);
+}
+
+.form-group:first-child {
+  margin-bottom: 2rem;
+}
+
+.form-group:last-child {
+  margin-top: 2rem;
+}
+
+.form-group > label,
+.form-group > p {
+  font-size: 18px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  background-color: var(--netural-very-light-grayish-cyan);
+  font-size: 24px;
+}
+
+.input-group,
+.radio-group {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.input-group img {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+  transform: translateY(-50%);
+  height: 40%;
+}
+
+.input-group input {
+  text-align: right;
+}
+
+.results-display h2 {
+  font-size: 48px;
+  color: var(--primary-strong-cyan)
+}
+
+.results-display h3 {
+  font-size: 18px;
+}
+
+.results-display p {
+  font-size: 14px;
+  color: var(--neutral-grayish-cyan)
+}
+
+.results-display {
+  margin-bottom: 2rem;
 }
