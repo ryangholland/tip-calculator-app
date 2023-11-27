@@ -1,8 +1,6 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-function Bill() {
-  const [billAmount, setBillAmount] = useState(0);
-
+function Bill({ bill, setBill }) {
   return (
     <div className="form-group">
       <label htmlFor="bill">Bill</label>
@@ -15,12 +13,17 @@ function Bill() {
           step="0.01"
           min="0.00"
           placeholder="$0.00"
-          value={billAmount}
-          onChange={(e) => setBillAmount(e.target.value)}
+          value={bill}
+          onChange={(e) => setBill(+e.target.value)}
         ></input>
       </div>
     </div>
   );
 }
+
+Bill.propTypes = {
+  bill: PropTypes.number,
+  setBill: PropTypes.func,
+};
 
 export default Bill;
