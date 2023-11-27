@@ -1,4 +1,6 @@
-function Results() {
+import PropTypes from "prop-types";
+
+function Results({ tipPerPerson, totalPerPerson }) {
   return (
     <div className="results-div">
       <div>
@@ -8,7 +10,7 @@ function Results() {
             <p>/ person</p>
           </div>
           <div className="results-display-right">
-            <h2>$4.27</h2>
+            <h2>${tipPerPerson}</h2>
           </div>
         </div>
         <div className="results-display">
@@ -17,7 +19,7 @@ function Results() {
             <p>/ person</p>
           </div>
           <div className="results-display-right">
-            <h2>$32.79</h2>
+            <h2>${totalPerPerson}</h2>
           </div>
         </div>
       </div>
@@ -26,5 +28,10 @@ function Results() {
     </div>
   );
 }
+
+Results.propTypes = {
+  tipPerPerson: PropTypes.string,
+  totalPerPerson: PropTypes.string,
+};
 
 export default Results;

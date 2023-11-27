@@ -5,8 +5,11 @@ import { useState } from "react";
 
 function App() {
   const [bill, setBill] = useState(0);
-  const [tip, setTip] = useState(15);
+  const [tip, setTip] = useState(0.15);
   const [people, setPeople] = useState(2);
+
+  let tipPerPerson = ((bill * tip) / people).toFixed(2);
+  let totalPerPerson = ((bill * tip) / people + bill / people).toFixed(2);
 
   return (
     <>
@@ -20,7 +23,7 @@ function App() {
           people={people}
           setPeople={setPeople}
         />
-        <Results />
+        <Results tipPerPerson={tipPerPerson} totalPerPerson={totalPerPerson} />
       </main>
     </>
   );

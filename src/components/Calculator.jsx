@@ -8,8 +8,8 @@ function Calculator(props) {
     <div className="calc-div">
       <form>
         <Bill bill={props.bill} setBill={props.setBill} />
-        <Tip />
-        <People />
+        <Tip tip={props.tip} setTip={props.setTip} />
+        <People people={props.people} setPeople={props.setPeople} />
       </form>
     </div>
   );
@@ -18,6 +18,10 @@ function Calculator(props) {
 Calculator.propTypes = {
   bill: PropTypes.number,
   setBill: PropTypes.func,
+  tip: PropTypes.number,
+  setTip: PropTypes.func,
+  people: PropTypes.number,
+  setPeople: PropTypes.func,
 };
 
 export default Calculator;
