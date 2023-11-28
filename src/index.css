@@ -95,6 +95,12 @@ input[type="radio"] {
   text-align: center;
 }
 
+.radio-btn:hover,
+.btn:hover {
+  background-color: var(--neutral-light-grayish-cyan);
+  color: var(--neutral-very-dark-cyan);
+}
+
 /* Style the label when the associated radio button is checked */
 input[type="radio"]:checked + label {
   background-color: var(--primary-strong-cyan);
