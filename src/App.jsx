@@ -11,6 +11,12 @@ function App() {
   let tipPerPerson = ((bill * tip) / people).toFixed(2);
   let totalPerPerson = ((bill * tip) / people + bill / people).toFixed(2);
 
+  const reset = () => {
+    setBill(0);
+    setTip(0.15);
+    setPeople(2);
+  };
+
   return (
     <>
       <Header />
@@ -23,7 +29,11 @@ function App() {
           people={people}
           setPeople={setPeople}
         />
-        <Results tipPerPerson={tipPerPerson} totalPerPerson={totalPerPerson} />
+        <Results
+          tipPerPerson={tipPerPerson}
+          totalPerPerson={totalPerPerson}
+          reset={reset}
+        />
       </main>
     </>
   );

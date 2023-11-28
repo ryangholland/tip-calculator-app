@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Results({ tipPerPerson, totalPerPerson }) {
+function Results({ tipPerPerson, totalPerPerson, reset }) {
   return (
     <div className="results-div">
       <div>
@@ -24,7 +24,9 @@ function Results({ tipPerPerson, totalPerPerson }) {
         </div>
       </div>
 
-      <button className="btn">Reset</button>
+      <button className="btn" onClick={() => reset()}>
+        Reset
+      </button>
     </div>
   );
 }
